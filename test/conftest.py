@@ -21,6 +21,19 @@ def client(session):
 
 
 @pytest.fixture
+def user(session):
+    password = 'testtest'
+
+    session.add(user)
+    session.commit()
+    session.refresh(user)
+
+    user.clean_password = 'testtest'
+
+    return user
+
+
+@pytest.fixture
 def session():
     engine = create_engine(
         'sqlite:///:memory:',
