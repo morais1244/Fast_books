@@ -6,7 +6,7 @@ from sqlalchemy.pool import StaticPool
 
 from database.database import get_session
 from database.models import Book, table_registry
-from main import app
+from app import app
 
 
 @pytest.fixture
