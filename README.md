@@ -38,9 +38,9 @@ Este é um projeto FastAPI que fornece uma API RESTful para gerenciar livros. Ca
 
 Para executar a aplicação localmente, use o seguinte comando:
 
-``sh
+```sh
 poetry run uvicorn app:app --reload
-``
+```
 
 
 ## Docker
@@ -49,10 +49,14 @@ Para construir e executar a aplicação usando Docker, siga estes passos:
 
 1. Construa a imagem Docker:
    
+ ```sh
   docker build -t fastapiproject .
+ ```
   
 3. Execute o container Docker:
-   
+
+```sh
   docker run -p 8000:8000 fastapiproject
-  
+```
+
 A API estará disponível em http://127.0.0.1:8000.
